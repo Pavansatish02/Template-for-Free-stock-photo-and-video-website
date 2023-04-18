@@ -1,0 +1,741 @@
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body{
+	background-color: #fff;
+	font-size: 14px;
+	color: #424242;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+
+::selection{
+	background: rgba(89,111,255,.8);
+	color: #fff;
+}	
+::-moz-selection{
+	background: rgba(89,111,255,.8);
+	color: #fff;
+}	
+ul, ol{
+	margin: 0;
+	padding: 0;
+}
+ul.list-inline{
+	margin-left: 0;
+}
+h1,h2,h3,h4,h5,h6,p{
+	margin: 1px; 
+}
+p{
+	font-size: 14px;
+	color: #999999;
+}
+a{
+	color: #999999;
+	-webkit-transition: background .3s, color .3s;
+	transition: background .3s, color .3s;
+}
+a:hover{
+	outline: none;
+	text-decoration: none;
+	color: #000;
+}
+a:focus{
+	outline: none;
+	outline-offset: 0;
+}
+.btn{
+	border-radius: 0;
+}
+.btn:focus{
+	outline: none;
+}
+input[type=text] {
+	width: 100px;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+  }
+  
+
+  * {box-sizing: border-box}
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: red;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+ .submitbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color:black;
+  padding-top: 50px;
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #e01717;
+  margin-bottom: 25px;
+}
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+
+/*-----  End of Typography  ------*
+==================================*/
+.mtb100{margin-bottom: 100px;}
+.ptb100{padding-bottom: 100px;}
+.ptt100{padding-top: 100px;}
+.img-100p{
+	width: 100%;
+}
+.overflow{
+	overflow: hidden;
+}
+.no-padding{
+	padding:0
+}
+.no-margin{
+	margin:0
+}
+.section-title{
+	font-size: 30px;
+	text-transform: uppercase;
+	margin-top: 100px;
+	margin-bottom: 50px;
+	text-align: center;
+	color: #F0394C;
+}
+.section-info{
+	margin-bottom: 60px;
+	text-align: center;
+}
+.horizontal-center{
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateZ(-50%);
+	transform: translateZ(-50%);	
+}
+.vertical-center{
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.horizontal-vertical-center{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);	
+}
+.overflow-content-full{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/*-----  End of shortcodes  ------*/
+
+/*============================
+=            menu            =
+============================*/
+
+.nav-menu a {
+	float: left;
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 15px;
+  }
+.main-nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 350px;
+	z-index: 999;
+	-webkit-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+}
+.main-nav-change .logo-left,
+.main-nav-change .menu-button{
+	top: 20px !important;
+}
+.main-nav-change{
+	background: rgba(240, 57, 76, 0.95);/* #F0394C*/;
+	height: 80px;
+}
+.logo-left{
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	z-index: 1;
+	-webkit-transition: top .5s ease-in-out;
+	transition: top .5s ease-in-out;
+}
+.menu-button{
+	position: fixed;
+	left: 90%;
+	text-align: right;
+	top: 50px;
+	z-index: 16;
+	width: 50px;
+	-webkit-transition: top .5s ease-in-out, left .5s;
+	transition: top .5s ease-in-out, left .5s;
+}
+
+.menu-active {
+  left: 75%;
+}
+.menu-button button {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+}
+.menu-button button:focus{
+	outline: none;
+}
+.nav-menu {
+  background: #171717 none repeat scroll 0 0;
+  padding-top: 50px; 
+   
+}
+.nav-menu li{
+	display: block;
+	padding:0;
+	margin: 0;
+}
+.nav-menu a {
+  color: #c4c4c4;
+  border: none;
+  padding: 15px 25px;
+  text-transform:uppercase;
+}
+.nav-menu a:hover,
+.nav-menu .current a{
+  color: #fff;
+  background-color: #F0394C;
+  text-decoration:none;
+} 
+
+/*-----  End of menu  ------*/
+
+/*===================================
+=            home-slider            =
+===================================*/
+
+#home-slider {
+  overflow: hidden;
+  position: relative;
+}
+#home-slider .item{
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+#home-slider .caption {
+  position: absolute;
+  top: 50%;
+  margin-top: -104px;
+  left: 50px;
+  right: 0;
+  text-align: left;
+  text-transform: uppercase;
+  z-index: 15;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+}
+#home-slider .caption-wide{margin-top: -204px;}
+#home-slider .caption .main-title {
+  color: #fff;
+  font-size: 90px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+#home-slider .caption .sub-title{
+	font-size: 40px;
+	color: #fff;
+	text-transform: uppercase;
+}
+.caption .btn-start {
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 10px 15px;
+  border: 1px solid #fff;
+  border-radius: 0;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+.caption .btn-start:hover{
+	color: #F0394C;
+	background:#fff;
+	}
+#home-slider .carousel-indicators .active{
+	height: 10px;
+}
+#home-slider .carousel-indicators li{
+	width: 45px;
+	height: 8px;
+	border: 1px solid #fff;
+}
+.navbar-right li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.navbar-right li.active a {
+  background-color: rgba(0,0,0,.2);
+}
+
+.navbar-brand h1 {
+  margin-top: 5px;
+}
+/*-----  End of home-slider  ------*
+/*================================
+=            features            =
+================================*/
+
+#features{
+	margin-top: 20px;
+	padding-top: 100px;
+	margin-bottom: 100px;
+}
+#features .header-content .title{
+	font-size: 40px;
+	color: #000;
+}
+#features .header-content .info{
+	font-size: 16px;
+	color: #363636;
+}
+.feature-item .content{
+	background: #f6f6f6;
+	padding: 40px;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+.feature-item .content .icon{
+	font-size: 80px;
+	color: #F0394C;
+	margin-bottom: 30px;
+	line-height: 100%;
+}
+.feature-item .content .title{
+	font-size: 20px;
+	color: #F0394C;
+	margin-bottom: 40px;
+	text-transform: uppercase;	
+}
+.feature-item .content:hover{
+	background-color: #F0394C; 
+	-webkit-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+.feature-item .content:hover .icon,
+.feature-item .content:hover .title,
+.feature-item .content:hover .info{
+	color: #fff;
+}
+/*-----  End of features  ------*/
+/*=================================
+=            vedio           =
+=================================*/
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+	position: relative;
+	right: 0;
+	bottom: 0;
+	min-width: 30px;
+	min-height: 30px;
+  }
+
+  /* Style the button used to pause/play the video */
+  #myBtn {
+	width: 200px;
+	font-size: 18px;
+	padding: 10px;
+	border: none;
+	background: #000;
+	color: #fff;
+	cursor: pointer;
+  }
+  
+  #myBtn:hover {
+	background: #ddd;
+	color: black;
+  }
+/*-----  End of vedio  ------*/
+
+/*===================================
+=            portfolio            =
+===================================*/
+.portfolio-filter{
+	margin-top: 20px;
+}
+.portfolio-filter li .active{
+	color: #F0394C;
+	text-decoration: none;
+}
+.portfolio-filter li a:hover{
+	color: #F0394C;
+}
+.portfolio-item{
+	margin-bottom: 30px;
+}
+.portfolio-item .content{
+	position: relative;
+	-webkit-transition: all .3s;
+	transition: all .3s;	
+}
+.portfolio-item .content figcaption{
+	background-color: rgba(240, 57, 76, 0.8);
+	color: #fff;
+	opacity: 0;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+.portfolio-item .content figcaption p,
+.portfolio-item .content figcaption a{
+	color: #fff;
+}
+.portfolio-item .content .icon{
+	-webkit-transform: translate(-50%, -50%) scale(0);
+	transform: translate(-50%, -50%), scale(0);
+	font-size: 34px;
+	-webkit-transition: all .3s;
+	transition: all .3s;	
+}
+.portfolio-item .content .caption{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px;
+	-webkit-transition: all .5s;
+	transition: all .5s;
+}
+.portfolio-item .content figcaption .title,
+.portfolio-item .content figcaption .info{
+	-webkit-transform: translateY(50%);
+	transform: translateY(50%);
+	-webkit-transition: all .3s;
+	transition: all .3s;	
+}
+.portfolio-item .content .caption .title{
+	margin-bottom: 15px;
+	text-transform: uppercase;
+}
+.portfolio-item .content:hover figcaption{
+	opacity: 1;
+}
+.portfolio-item .content:hover figcaption .icon{
+	-webkit-transform: translate(-50%, -50%) scale(1);
+	transform: translate(-50%, -50%) scale(1);
+}
+.portfolio-item .content:hover figcaption .caption{
+	bottom: 0;
+}
+.portfolio-item .content:hover figcaption .title,
+.portfolio-item .content:hover figcaption .info{
+	-webkit-transform: translateY(0);
+	transform: translateY(0);	
+}
+
+/*-----  End of portfolio  ------*/
+/*==================================
+=            count-down            =
+==================================*/
+
+
+#count-down .color-overlay{
+	width: 100%;
+	height: 100%;
+	background: rgba(231, 47, 66, 0.903);
+}
+#count-down .section-title,
+#count-down .counter-content p,
+#count-down .counter-content span{
+	color: #fff;
+}
+#count-down .section-title{
+	font-size: 26px;
+}
+#count-down .counter-content .counter{
+	font-size: 55px;
+	margin-bottom: 30px;
+}
+#count-down .counter-content .title{
+	font-size: 20px;
+	text-transform: uppercase;
+}
+/*-----  End of count-down  ------*/
+/*=======================================
+=            client-feedback            =
+=======================================*/
+#client-feedback{
+	background: url(../img/bg/02.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+}
+#client-feedback .color-overlay{
+	width: 100%;
+	height: 100%;
+	background: rgba(16,19,38,.9);
+}
+#client-feedback .main-content{
+	position: relative;
+}
+#client-feedback .custom-control a{
+	color: #fff;
+	font-size: 40px;
+}
+#client-feedback .custom-control #slider-prev,
+#client-feedback .custom-control #slider-next{
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 999;
+	font-size: 40px;
+}	
+#client-feedback .custom-control #slider-prev{
+	left: 0;
+}
+#client-feedback .custom-control #slider-next{
+	right: 0;
+}
+#client-feedback .bx-wrapper .bx-viewport{
+	width: 80% !important;
+	margin:0 auto !important;
+	height: auto !important;
+	box-shadow: none;
+	border: 10px solid transparent;
+	background: none;	
+	text-align: center;
+}
+#client-feedback .main-content p{
+	color: #fff;
+	font-size: 18px;
+}
+#client-feedback .main-content .client-name a{
+	color: #fff;
+	font-size: 16px;
+}
+#client-feedback .client-name{
+	margin-top: 40px;
+}
+/*-----  End of client-feedback  ------*/
+
+
+/*===============================
+=            join-us            =
+===============================*/
+
+#join-us{
+	background: url(../img/bg/03.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+}
+#join-us .color-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,.9);
+}
+.join-btn a{
+	background-color: #F0394C;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 0;
+	padding: 15px 30px;
+	color: #fff;
+	font-size: 18px;	
+	position: relative;
+	display: inline-block;
+}
+
+.join-btn a:hover{
+	color: #fff;
+	background: #333;
+}
+
+/*-----  End of join-us  ------*/
+
+
+
+/*===============================
+=            contact            =
+===============================*/
+#contact{
+	position: relative;
+	overflow: hidden;
+}
+#contact .map-content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+#contact .color-overlay{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.8);
+	z-index: 10;
+}
+#gmap {
+	height:100%;
+}
+#contact .form-content .section-info{
+	color: #fff;
+}
+
+#contact .form input,
+#contact .form textarea{
+	border-radius: 0;
+	border: 1px solid #e0e0e0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	margin-bottom: 20px;
+	padding: 20px;
+	background: none;
+	color: #fff;
+}
+#contact .form input:focus,
+#contact .form textarea:focus{
+	box-shadow: none;
+	border-color: #F0394C;
+}
+#contact .form .btn-submit{
+	background: #F0394C;
+	color: #fff;
+	padding: 12px;
+}
+#contact .form .btn-submit:hover{
+	color: #fff;
+}
+.map-content{
+	padding:0
+}
+/*-----  End of contact  ------*/
+
+
+
+/*==============================
+=            footer            =
+==============================*/
+
+#footer{
+	background: #333333;
+	padding-top: 100px;
+}
+#footer .bottom-part{
+	padding-bottom: 70px;
+}
+.social-icon-footer li{
+	margin-right: 10px;
+}
+.social-icon-footer li:last-child{
+	margin-right: 0;	
+}
+.social-icon-footer li a{
+	font-size: 30px;
+}
+.social-icon-footer li a:hover{
+	color: #F0394C;
+}
+
+
+
+/*-----  End of footer  ------*/

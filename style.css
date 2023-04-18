@@ -1,0 +1,21 @@
+form input{
+	border: 0;
+	outline: none;
+	padding:10px 20px;
+	height: 40px;
+	width:400;
+	font-size:16px;
+}
+
+  form button{
+  background: #61b752;
+  border:none;
+  outline: none;
+  height: 50px;
+  width: 100px;
+}
+span{
+	color: #61b752;
+	margin-top: 10px;
+	display: block;
+}
